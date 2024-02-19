@@ -19,5 +19,5 @@
     "outDir": "./dist", // Directory for compiled files
   },
   "include": ["src", "server"], // Files to include
-  "exclude": ["node_modules", "**/*.test.ts"] // Files to exclude
+  "exclude": ["node_modules"] // Files to exclude
 }

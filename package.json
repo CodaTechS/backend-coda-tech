@@ -12,7 +12,9 @@
     "clean-build": "rimraf dist/",
     "clean-log": "rimraf logs/",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
