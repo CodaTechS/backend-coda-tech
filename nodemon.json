@@ -1,0 +1,10 @@
+{
+    "execMap": {
+      "ts": "ts-node"
+    },
+    "watch": ["server", "src"],
+    "ignore": ["node_modules", "src/**/*.test.ts"],
+    "exec": "node -r ts-node/register -r esm ./server/app.ts",
+    "ext": ".ts"
+  }
+  
