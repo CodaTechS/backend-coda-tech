@@ -4,8 +4,8 @@
   "description": "",
   "main": "./server/app.ts",
   "scripts": {
-    "start:build-prod": "npm run clean-log && NODE_ENV=production node ./dist/app.js",
-    "start:build-dev": "npm run clean-log && NODE_ENV=development node ./dist/app.js",
+    "start:build-prod": "npm run clean-log && NODE_ENV=production node ./dist/server/app.js",
+    "start:build-dev": "npm run clean-log && NODE_ENV=development node ./dist/server/app.js",
     "start:prod": "npm run clean-log && NODE_ENV=production nodemon",
     "start:dev": "npm run clean-log && NODE_ENV=development nodemon",
     "build": "npm run clean-build && tsc",

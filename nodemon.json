@@ -4,7 +4,7 @@
     },
     "watch": ["server", "src"],
     "ignore": ["node_modules", "src/**/*.test.ts"],
-    "exec": "node -r ts-node/register -r esm ./server/app.ts",
+    "exec": "node -r ts-node/register ./server/app.ts",
     "ext": ".ts"
   }
   
