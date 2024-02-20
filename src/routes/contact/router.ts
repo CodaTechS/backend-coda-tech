@@ -1,15 +1,11 @@
-import { Router, Request, Response, NextFunction } from "express";
+import { Router, Request, Response } from "express";
+import { check, validationResult } from "express-validator";
 
 const router = Router();
 const express = require('express');
 const app = express();
-const port = 8080;
 
 app.use(express.urlencoded({ extended: true }));
-
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
-});
 
 router.get("/contact", (req: Request, res: Response) => {
   res.send(`
@@ -32,11 +28,11 @@ router.get("/contact", (req: Request, res: Response) => {
 });
 
 router.post("/contact", (req: Request, res: Response) => {
-  const { nome, email, contato } = req.body;
-  console.log("Nome:", nome);
+  const { name, email, contact } = req.body;
+  console.log("Name:", name);
   console.log("Email:", email);
-  console.log("contato:", contato);
-  res.send("Dados recebidos!")
+  console.log("contact:", contact);
+  res.send("Obrigado por entrar em contato!")
 })
 
 export default router;
