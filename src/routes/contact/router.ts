@@ -1,11 +1,6 @@
 import { Router, Request, Response } from "express";
-import { check, validationResult } from "express-validator";
 
 const router = Router();
-const express = require('express');
-const app = express();
-
-app.use(express.urlencoded({ extended: true }));
 
 router.get("/contact", (req: Request, res: Response) => {
   res.send(`
