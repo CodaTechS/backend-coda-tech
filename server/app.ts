@@ -9,11 +9,11 @@ import { httpLoggerMiddleware } from "./middlewares/http-logger";
 
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
-
 /***************
  * Middlewares *
  ***************/
+
+app.use(express.urlencoded({ extended: true }));
 
 // Dotenv config
 dotenv.config({
