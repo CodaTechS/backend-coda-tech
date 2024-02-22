@@ -8,7 +8,7 @@ Utiliza Node.js, Express para a criação da API, e MongoDB como banco de dados.
 
 ## Pré-requisitos
 
-Para rodar este projeto, você precisa ter o Node.js e o npm (Node Package Manager) instalados em sua máquina.
+Para rodar este projeto, você precisa ter o Node.js, npm (Node Package Manager) ou o Docker instalados em sua máquina.
 **\*OBS:** Recomendamos utilizar a versão 21.5.0 do Node.js, já que foi a utilizada durante o desenvolvimento.\*
 
 Siga os passos abaixo para preparar seu ambiente de desenvolvimento:
@@ -21,7 +21,7 @@ Siga os passos abaixo para preparar seu ambiente de desenvolvimento:
 
 **\*OBS:** O npm é instalado automáticamente junto com o Node.js.\*
 
-## Instalação do projeto
+## Instalação do projeto 
 
 1. **Clonar o repositório:**
     - Use `git clone [URL_DO_REPOSITÓRIO]` para clonar o repositório para sua máquina local.
@@ -46,3 +46,35 @@ Os arquivos `.env.production` e `.env.development`, localizados na pasta `enviro
 
 -   **PORT**: Define a porta na qual a aplicação irá rodar.
 -   **SHOW_LOGGER**: Habilita ou desabilita o registro de logs.
+
+## Instalação do arquivo usando Docker Compose
+
+O projeto também pode ser executado utilizando Docker Compose, que facilita a configuração e execução do ambiente. Certifique-se de ter o Docker e o Docker Compose instalados na sua máquina.
+
+### Pré-requisitos
+
+1. **Instalar Docker:**
+   - Siga as instruções em [Docker Installation Guide](https://docs.docker.com/get-docker/) para instalar o Docker na sua máquina.
+
+2. **Instalar Docker Compose:**
+   - Siga as instruções em [Docker Compose Installation Guide](https://docs.docker.com/compose/install/) para instalar o Docker Compose.
+
+### Executando com Docker Compose
+
+1. **Clonar o repositório:**
+   - Use `git clone git@github.com:CodaTechS/backend-coda-tech.git` para clonar o repositório para sua máquina local.
+
+2. **Navegar até a pasta do projeto:**
+   - `cd backend-coda-tech`
+
+3. **Criar arquivo `.env` para Docker Compose:**
+   - Crie um arquivo chamado `.env` na raiz do projeto e configure as variáveis de ambiente necessárias, como `PORT` e outras conforme necessário.
+
+4. **Construir e Iniciar os Contêineres:**
+   - Execute o comando `docker-compose up --build` para construir as imagens e iniciar os contêineres.
+
+5. **Acessar a API:**
+   - A aplicação estará acessível em `http://localhost:{PORT}`, onde `{PORT}` é a porta definida no arquivo `.env`.
+
+6. **Parar os Contêineres:**
+   - Para parar a execução dos contêineres, pressione `Ctrl + C` no terminal onde o `docker-compose up` está sendo executado.
