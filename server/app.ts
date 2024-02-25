@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
+import mongoose from "mongoose";
 
 import allRoutes from "../src/routes/index-routes";
 
@@ -32,6 +33,21 @@ app.use(httpLoggerMiddleware);
 // Apply all routes
 allRoutes.forEach((router) => {
   app.use(router);
+});
+
+/**********************
+ * Database Connection *
+ **********************/
+
+const mongoUri = process.env.MONGODB_URI;
+if (mongoUri) {
+  mongoose.connect(mongoUri);
+}
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
+db.once("open", () => {
+  console.log("Connected to MongoDB!");
 });
 
 /***************
