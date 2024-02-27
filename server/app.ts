@@ -7,11 +7,14 @@ import allRoutes from "../src/routes/index-routes";
 import { httpLoggerMiddleware } from "./middlewares/http-logger";
 
 // Constants
+
 const app = express();
 
 /***************
  * Middlewares *
  ***************/
+
+app.use(express.urlencoded({ extended: true }));
 
 // Dotenv config
 dotenv.config({
